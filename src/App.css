@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+.marker-button{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.marker-button img{
+  width: 30px;
+  height: 30px;
+}
+
+.add-form{
+  display: flex;
+  flex-direction: column;
+}
+
+.add-form input[type=text], select{
+  margin: 5px;
+}
+
+.place-image{
+  align-self: center;
+  width: 200px;
+  height: 200px;
+}
