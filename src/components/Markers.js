@@ -14,6 +14,7 @@ export default function Markers({ setSelected, addMenu, selected }) {
   }, [addMenu, selected]);
 
   const selectPlace = (marker)=>{
+    console.log(marker);
     setSelected(marker);
   }
 
