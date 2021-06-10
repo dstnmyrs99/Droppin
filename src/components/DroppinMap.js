@@ -2,9 +2,11 @@ import { useState } from "react";
 import ReactMapGL, { Popup, FlyToInterpolator } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Markers from "./Markers";
+import Login from "./Login";
 import AddPlaceForm from './AddPlaceForm';
 
 function DropppinMap() {
+  const [loggedIn, setLoggedIn] = useState(false);
   const [addMenu, setAddMenu] = useState(null);
   const [selected, setSelected] = useState(null);
   const [viewport, setViewport] = useState({
@@ -35,7 +37,8 @@ function DropppinMap() {
   };
 
   return (
-    <ReactMapGL
+    <>
+    { loggedIn ? <ReactMapGL
       {...viewport}
       mapboxApiAccessToken={process.env.REACT_APP_MAP_TOKEN}
       mapStyle="mapbox://styles/dstnmyrs99/ckmdrq2dsbxu517p8bdls5yv5"
@@ -66,8 +69,8 @@ function DropppinMap() {
           <AddPlaceForm location={addMenu.lngLat} setAddMenu={setAddMenu}/>
         </Popup>
       )}
-    </ReactMapGL>
-  );
+    </ReactMapGL> : <Login setLoggedIn={setLoggedIn}/>}
+  </>);
 }
 
 export default DropppinMap;
