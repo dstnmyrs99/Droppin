@@ -31,7 +31,6 @@ export default function AddPlaceForm({ location, setAddMenu }) {
   return (
     <form action="" onSubmit={handleSubmit} className="add-form">
       <label htmlFor="name">
-        Name:
         <input
           id="name"
           type="text"
@@ -39,10 +38,10 @@ export default function AddPlaceForm({ location, setAddMenu }) {
           onChange={handleChange}
           value={formData.name}
           required
+          placeholder="Name"
         />
       </label>
       <label htmlFor="description">
-        Description:
         <input
           id="description"
           type="text"
@@ -50,10 +49,10 @@ export default function AddPlaceForm({ location, setAddMenu }) {
           onChange={handleChange}
           value={formData.description}
           required
+          placeholder="Description"
         />
       </label>
       <label htmlFor="image_url">
-        Image url:
         <input
           id="image_url"
           type="text"
@@ -61,10 +60,10 @@ export default function AddPlaceForm({ location, setAddMenu }) {
           onChange={handleChange}
           value={formData.image_url}
           required
+          placeholder="Image URL"
         />
       </label>
       <label htmlFor="marker">
-          Marker: 
         <select
           id="marker"
           name="marker"

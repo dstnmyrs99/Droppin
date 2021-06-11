@@ -6,7 +6,8 @@ import Login from "./Login";
 import AddPlaceForm from './AddPlaceForm';
 
 function DropppinMap() {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
+  const [userType, setUserType] = useState("business");
   const [addMenu, setAddMenu] = useState(null);
   const [selected, setSelected] = useState(null);
   const [viewport, setViewport] = useState({
@@ -32,7 +33,7 @@ function DropppinMap() {
 
   const handleRightClick = (e) => {
     e.preventDefault();
-    setAddMenu(e);
+    if(userType === "business") setAddMenu(e);
 
   };
 
