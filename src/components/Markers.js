@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Marker } from "react-map-gl";
-import {getMarkers} from "../api/markersApi";
+import {getMarkers} from "../api/Api";
 
 export default function Markers({ setSelected, addMenu, selected }) {
   const [markers, setMarkers] = useState([]);
@@ -14,7 +14,6 @@ export default function Markers({ setSelected, addMenu, selected }) {
   }, [addMenu, selected]);
 
   const selectPlace = (marker)=>{
-    console.log(marker);
     setSelected(marker);
   }
 

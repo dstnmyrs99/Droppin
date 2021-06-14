@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createMarker } from "../api/markersApi";
+import { createMarker } from "../api/Api";
 
 export default function AddPlaceForm({ location, setAddMenu }) {
   const initialState = {
